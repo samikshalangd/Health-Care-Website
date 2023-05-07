@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+  --primary: #1f2e88 ;
+  --secondary: #2f66d4 ;
+  --hover: #a2d9f5;
+  --black: #333;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #eee;
+  --border:.2rem solid rgba(0,0,0,0.1);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  transition: 0.2s linear;
+}
+
+html{
+  font-size: 62.2%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 5rem;
+}
+
+/* global classes */
+
+section{
+  padding: 5rem 7%;
+}
+
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  background: var(--primary);
+  font-size: 1.7rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--secondary);
+}
+
+/* header */
+.header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top:0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+
+.header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.header .logo i{
+  color: var(--primary);
+  padding-right: .5rem;
+}
+
+.header .navbar a{
+  font-size: 1.7rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+  color: var(--primary);
+}
+
+.header .btn{
+  margin-top: 0;
+}
+
+#menu-btn{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  margin-left: 1.7rem;
+  display: none;
+}
+
+#menu-btn:hover{
+  color: var(--primary);
+}
+
+/* end header */
+
+
+/* home */
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://media.istockphoto.com/id/1276811978/photo/helping-the-needy.jpg?s=612x612&w=0&k=20&c=Ajw3t4K3Xhxh7QIM69P_nIOSjaP9f37CZpoRWPr6LBQ=) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content{
+  max-width: 60rem;
+  padding-top: 10rem;
+  padding-left: 6rem; /*rtl*/
+}
+
+.home .content h3{
+  font-size: 6rem;
+  color: var(--black);
+  line-height: 1.2;
+}
+
+.home .content p{
+  line-height: 2;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+.form
+{
+  font-size: 1.7rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* end home */
+
+/* about us */
+
+.about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .image{
+  flex: 1 1 40rem;
+}
+
+.about .row .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+}
+
+.about .row .content{
+  flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+  color: var(--black);
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.about .row .content p{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+}
+/* end about */
+
+/* services */
+.services{
+  background: var(--light-bg);
+}
+
+.services .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box{
+  padding: 4rem;
+  text-align: center;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: 5rem;
+}
+
+.services .box-container .box:hover{
+  background: var(--hover);
+  cursor: context-menu;
+}
+
+.services .box-container .box img{
+  margin: 1rem 0;
+  height: 17rem;
+  border-radius: 5rem;
+}
+
+.services .box-container .box h3{
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.services .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+/* end services section */
+
+/* team section */
+
+.team .slide{
+  text-align: center;
+}
+
+.team .slide .image{
+  position: relative;
+  overflow: hidden;
+}
+
+.team .slide .image img{
+  width: 100%;
+}
+
+.team .slide .image .share{
+  padding: 2rem;
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.team .slide:hover .image .share{
+  bottom: 0;
+}
+
+.team .slide .image .share a{
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: var(--white);
+  
+}
+
+.team .slide .image .share a:hover{
+  color: var(--secondary);
+}
+
+.team .slide .content{
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team .slide .content h3{
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.team .slide .content span{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+
+/* end team section */
+
+/* pricing */
+.pricing{
+  background-color: var(--light-bg);
+}
+
+
+
+/* contact */
+.contact{
+  background: var(--light-bg);
+}
+
+.contact form{
+  padding: 2rem;
+  background: var(--white);
+  max-width: 50rem;
+  margin: 0 auto;
+  border-radius: .5rem;
+}
+
+.contact form span{
+  font-size: 1.7rem;
+  color: var(--primary);
+}
+
+.contact form .input-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact form .input-box input{
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+  background: var(--light-bg);
+  border-radius: .5rem;
+  width: 49%;
+}
+
+.contact form .box{
+  margin: 1rem 0;
+  width: 100%;
+  background: var(--light-bg);
+  border-radius: .5rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+/* end contact */
+
+/* footer */
+ .footer{
+  text-align: center;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  color: var(--secondary);
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  line-height: 2;
+  color: var(--light-color);
+  padding: .5rem 0;
+}
+
+.footer .box-container .box .share{
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share a{
+  height: 4.5rem;
+  width: 4.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 10%;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  margin-right: .3rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+  background: var(--secondary);
+}
+
+.footer .box-container .box .link{
+  display: block;
+  font-size: 1.7rem;
+  line-height: 2;
+  color: var(--primary);
+  padding: .5rem 0;
+}
+
+.footer .box-container .box .link:hover{
+  color: var(--hover);
+}
+
+.footer .credit{
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--primary);
+  border-top: .1rem solid var(--secondary);
+}
+
+.footer .credit i{
+  color: var(--hover);
+}
+
+.footer .credit span{
+  color: var(--secondary);
+} -->
+
+/* end footer */
+
+/* media queries */
+    </style>
+</head>
+<body>
+    /<!-- start header -->
+<header class="header">
+
+    <!--   start logo -->
+    <a href="#" class="logo">
+      <i class="fas fa-tooth"></i>
+      Health Ok
+    </a>
+  
+    <!--   start navbar -->
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Healthcare</a>
+      <a href="#team">Contact us</a>
+    
+    </nav>
+    <!--   end navbar -->
+    <a href="" class="btn">make appointment</a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+  
+  </header>
+  <!-- end header -->
+  
+  <!-- start home -->
+  <section id="home" class="home">
+  
+    <div class="content">
+  
+      <h3>Make Your Heart Shine</h3>
+      <p></p>    
+      <a href="#" class="btn">make appointment</a>
+  
+    </div>
+  <div class="form">
+    <p><b>Your Health is Our First Priority.</b></p>
+    <hr>
+
+    <label for="name"><b>Enter Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+
+    <label for="age"><b>Enter Age</b></label>
+    <input type="text" placeholder="Enter Age" name=" age" required>
+
+    <label for="gender"><b>Enter Gender</b></label>
+    <input type="text" placeholder="Enter Gender" name="gender" required>
+
+    <label for="Disease"><b>Enter Any Disease You Have</b></label>
+    <input type="text" placeholder="Enter Any Disease You Have " name="name" required>
+  
+
+    <div class="clearfix">
+ <button type="submit" class="signupbtn"> <b>Check How To Stay Healthy</b></button>
+    </div>
+  </div>
+</form>
+  </div>
+  </section>
+  <!-- end home -->
+  
+  <!-- about -->
+  
+  <section id="about" class="about">
+  
+    <h1 class="heading"> About us </h1>
+  
+    <!--   content -->
+    <div class="row">
+  
+      <!--     image -->
+      <div class="image">
+        <img src="https://thumbs.dreamstime.com/b/asian-senior-woman-feeding-older-sister-thai-food-female-elderly-helping-her-to-eat-take-drug-love-care-concern-170670017.jpg" alt="medical equipment">
+      </div>
+  
+      <!--     info -->
+      <div class="content">
+        <h3>Some Care are Special And You are More Special to us....</h3>
+        <p>Your health is our responibility and we promiss you to take this responibility for you</p>
+        <p>Age is just Number And young is an attitude.</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <!-- end about -->
+  
+  <!-- HEalthCare -->
+  
+  <section id="services" class="services">
+  
+    <h1 class="heading"> Our Healthcare </h1>
+  
+    <div class="box-container">
+      <!--     start field -->
+      <div class="box">
+        <img src="https://www.shutterstock.com/image-vector/pills-capsule-medication-management-card-260nw-1083475925.jpg" alt="teeth appointment illustration">
+        <h3>Online Schedule</h3>
+        <p>Take appoinment of ourexpert DR and solve your query and problem.</p>
+      </div>
+      <!--     end field -->
+  
+      <!--     start field -->
+      <div class="box">
+        <img src="https://media.istockphoto.com/id/1375039697/photo/healthy-fruits-and-vegetables-salad-recipe.jpg?b=1&s=170667a&w=0&k=20&c=YzWsM-BQitBf9og-RKD9AEVtnzQ79yVeso6gzSNaXF4=" alt="dental care">
+        <h3>Health & Nutrition</h3>
+        <p> For Healthy and Nutrition Diet Connect with expert Nutritionist</p>
+      </div>
+      <!--     end field -->
+  
+      <!--     start field -->
+      <div class="box">
+        <img src="https://smiledental.com/wp-content/uploads/2019/03/oralcare.jpg" alt="oral hygiene">
+        <h3>Oral Hygiene Experts</h3>
+        <p>For Oral Problem Connect With Expert Dentist</p>
+      </div>
+      <!--     end field -->
+  
+    </div>
+  
+  </section>
+   
+  <!-- Contact  -->
+  
+  <section id="contact" class="contact">
+    
+    <h1 class="heading">make appointment</h1>
+    
+    <form action="">
+      
+      <span>your name:</span>
+      <div class="input-box">
+        <input type="text" placeholder="first name">
+        <input type="text" placeholder="last name">
+      </div>
+      
+      <span>your email:</span>
+      <input type="email" class="box" placeholder="enter your email" >
+      
+       <span>your number:</span>
+       <input type="number" class="box" placeholder="enter your number" >
+      
+       <span>appointment date:</span>
+       <input type="datetime-local" class="box">
+      
+      <input type="submit" class="btn" value="order now">
+      
+    </form>
+  </section>
+  
+  <!-- contact ends -->
+  
+  <!-- footer -->
+  
+  <section class="footer">
+    
+    <div class="box-container">
+      
+  <!--     start column -->
+  <section>
+      <div class="box">
+        
+        <h3>Address</h3>
+        <p>At Post Lonkhari Near Koradi Nagpur -441111.</p>
+          </div>
+   
+    </section>
+  <!--     end column -->
+      
+  <!--     start column -->
+      <div class="box">
+        <h3>email</h3>
+        <a href="#" class="link">samikshalangde284@gmail.com</a>
+      </div>
+      
+  <!--     end column -->
+      
+  <!--     start column -->
+      <div class="box">
+        <h3>opening hours</h3>
+        <p>monday-friday : 08:00Am - 23:00PM<br>
+          saturday : 10:00Am - 18:00PM
+        </p>
+      </div>
+  <!--     end column -->   
+      
+    </div>
+    
+    <div class="credit">
+        made  <i class="fas fa-heart"></i> by <span>Samiksha Pradeep Langde</span> | Healthacare Website @2023
+      </div>
+    
+  </section>
+  
+  <!-- end footer -->
+  <script>
+    //swipper js
+var swiper = new Swiper(".team-slider",{
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+    breakpoints:{
+      0: {
+      slidesPerView:1,  
+      },
+      768: {
+      slidesPerView:2,  
+      }, 
+      991: {
+      slidesPerView:3,  
+      },
+    }
+  });
+  </script>
+  
+</body>
+</html>
